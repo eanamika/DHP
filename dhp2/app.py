@@ -12,10 +12,11 @@ app = Flask(__name__)
 app.secret_key = '2030'
 # Connect to PostgreSQL
 conn = psycopg2.connect(
-    dbname="postgres",
-    user="postgres",
-    password="Mika@19052030",
-    host="localhost"
+    dbname="anamika1905",
+    user="anamika1905_user",
+    password="QemaFXCOGzKvJUVelWF9OSvpZEZXPYMR",
+    host="dpg-cnmmi72cn0vc738eu6sg-a",
+    port="5432"
 )
 cur = conn.cursor()
 # Create table if not exists
