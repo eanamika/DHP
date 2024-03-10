@@ -9,6 +9,10 @@ from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
 from nltk import pos_tag
 from collections import Counter
+nltk.download('universal_tagset')
+nltk.download('punkt')
+nltk.download('averaged_perceptron_tagger')
+
 
 app = Flask(__name__)
 app.secret_key = '2030'
