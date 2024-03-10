@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Analysis Result</title>
+
+    <style>
+        *{margin: 0%;
+        padding: 0%;}
+        body{
+            background-image: url('https://th.bing.com/th/id/OIP.cSGHz8M-77sHTTyIebn9FQHaFj?rs=1&pid=ImgDetMain');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .body-content{
+            margin: 0 auto;
+            display:flex;
+            justify-content: center;
+            align-content: center;
+            background-position: center;
+            flex-wrap:wrap;
+            text-align: justify;
+            width:90%;
+           
+        }
+        .main_heading{
+            padding-bottom: 20px;
+            background-color: rgba(58, 11, 198, 0.2);
+            width:50%;
+            margin:0 auto;
+            text-align: center;
+            font-size: 20px;
+            border-radius:30px;
+        }
+        .text_summary{
+            margin:0 auto;
+            width:95%;
+            font-size:23px;
+        }
+        #heading{
+            text-align: center;
+            font-size: 32px;
+            color:rgba(12, 10, 10, 0.629);
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .analysis_summary{
+            color:rgb(8, 16, 29);
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            align-content: center;
+
+        }
+        td,th{text-align: center;}
+        .table_view{
+            margin:0 auto;
+            border-color: blueviolet;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            margin-top: 10px;
+            font-size: larger;
+            width:90%;
+            }
+        .table_view td,
+        .table_view th{
+            border: 5px solid rgb(82, 55, 108);
+        }
+
+        .heading_summary,.heading_keywords{margin-top: 10px;
+            font-size: 40px;
+            color:rgb(50, 12, 12);
+        }
+        .keywords{text-align: justify;
+            width:75%;
+            margin:0 auto; 
+            margin-top: 10px;
+            font-size: 25px;
+            }
+        
+        .keywords strong{
+            font-weight: bold;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="body-content">
+        <div class="main_heading"><h1>News Analysis Result</h1></div>
+        
+        <div class="text_summary">
+            <h2 id="heading">Cleaned News Text:</h2>
+            <p>{{ cleaned_news_text }}</p>
+        </div>
+        <div class="analysis_summary">
+            <h2 class="heading_summary">Analysis Summary:</h2>
+        </div>
+        <div>
+            <table class="table_view" border="1">
+                <tr>
+                    <th>Number of Sentences:</th>
+                    <th>Number of Words</th>
+                    <th>POS Tags</th>
+                </tr>
+                <tr>
+                    <td>{{ analysis_summary.num_sentences }}</td>
+                    <td>{{ analysis_summary.num_words }}</td>
+                    <td>{{ analysis_summary.pos_tags }}</td>
+                </tr>
+            </table>
+            
+            <div class="keywords">
+                <p class="heading_keywords">Keywords:</p>
+                {{ analysis_summary.keywords }}</div>
+            
+        </div>
+    </div>
+</body>
+
+</html>

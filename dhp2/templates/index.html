@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Analyzer</title>
+    
+    <style>
+        *{margin:0%;
+        padding: 0%;}
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://th.bing.com/th/id/R.0302655ec4b60a61a38f407e046ce40d?rik=e42MwD6GfnihJA&riu=http%3a%2f%2fwww.pngmart.com%2ffiles%2f10%2fNewspaper-PNG-Transparent-Image.png&ehk=ix3gL9PgwB8M13sv9zHKlWFeFKgDwDkRiG8yhcE1uug%3d&risl=&pid=ImgRaw&r=0'); /* Replace 'background.jpg' with your desired background image */
+            background-size: 100%;
+            background-color: rgba(239, 78, 9, 0.3);
+
+        }
+        h1{
+            font-size: larger;
+            color:bl
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(158, 200, 214, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(138, 13, 191, 0.842);
+        }
+
+        header {
+            background-color: rgba(126, 115, 203, 0.8);
+            color: #180707;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 18px 18px 0 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 45px;
+        }
+
+        .main-content {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .main-content h2 {
+            margin-bottom: 25px;
+            color: #364049;
+        }
+
+        form {
+            margin-bottom: 25px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            width: 60%;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #b92491;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #b92491;
+            color: #f6eff3;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #218838;
+        }
+
+        .news-img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CLEAN YOUR NEWS ARTICLE</h1>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="container">
+            <h2>PLEASE ENTER YOUR URL HERE😊</h2>
+            <form method="POST">
+                <input type="text" name="url" placeholder="Enter URL">
+                <input type="submit" value="Analyze">
+            </form>
+            <a href="{{ url_for('admin_history') }}" class="btn">View History</a>
+        </div>
+    </div>
+</body>
+</html>

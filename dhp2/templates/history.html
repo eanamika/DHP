@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin History</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-size: 100%;
+            background-position: center;
+        
+        }
+        header {
+            background-color: rgba(16, 89, 206, 0.7);
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(196, 86, 163, 0.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        h1 {
+            color: #0d0e0d;
+        }
+        .main-content {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(89, 161, 169, 0.7);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+            font-weight: bold;
+        }
+        tbody tr:hover {
+            background-color: #f5f5f5;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Admin History</h1>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Serial No.</th>
+                        <th>URL </th>
+                        <th>Cleaned News Text</th>
+                        <th>Analysis Summary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in rows %}
+                    <tr>
+                        <td>{{ row[0] }}</td>  <!-- Assuming the first column is the ID -->
+                        <td>{{ row[1] }}</td>  <!-- Assuming the second column is the URL -->
+                        <td>{{ row[2] }}</td>  <!-- Assuming the third column is the news text -->
+                        <td>{{ row[3] }}</td>  <!-- Assuming the fourth column is the analysis summary -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</body>
+</html>
