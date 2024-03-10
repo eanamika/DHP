@@ -4,7 +4,6 @@ import psycopg2
 import json
 import re
 import nltk
-nltk.download('universal_tagset')
 from nltk.tokenize import word_tokenize, sent_tokenize
 from nltk.corpus import stopwords
 from nltk import pos_tag
